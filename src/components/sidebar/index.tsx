@@ -96,47 +96,33 @@ const data = [
     ],
   },
   {
-    title: "Sport",
-    icon: { kind: "default" },
-    path: {
-      href: "/",
-    },
-  },
-  {
-    title: "Lottery",
+    title: "React Native",
     icon: { kind: "default" },
     children: [
       {
-        title: "Keno",
-        icon: { kind: "font", source: "ic_icon text-24 ic_QR-code" },
+        title: "React General Resources",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
         path: {
           href: "/",
         },
       },
       {
-        title: "Mega 6/45",
-        icon: { kind: "font", source: "ic_icon text-24 ic_QR-code" },
+        title: "React Native Navigation",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
         path: {
           href: "/",
         },
       },
       {
-        title: "3D Max",
-        icon: { kind: "font", source: "ic_icon text-24 ic_QR-code" },
+        title: "React Native Awesome Components",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
         path: {
           href: "/",
         },
       },
       {
-        title: "4D Max",
-        icon: { kind: "font", source: "ic_icon text-24 ic_QR-code" },
-        path: {
-          href: "/",
-        },
-      },
-      {
-        title: "5D Max",
-        icon: { kind: "font", source: "ic_icon text-24 ic_QR-code" },
+        title: "React Native Libraries",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
         path: {
           href: "/",
         },
@@ -149,27 +135,85 @@ const data = [
     path: {
       href: "/",
     },
-  },
-  {
-    title: "Free Box",
-    icon: { kind: "default" },
-    path: {
-      href: "/",
-    },
-  },
-  {
-    title: "Referrals",
-    icon: { kind: "default" },
-    path: {
-      href: "/",
-    },
-  },
-  {
-    title: "Promotion",
-    icon: { kind: "default" },
-    path: {
-      href: "/",
-    },
+    children: [
+      {
+        title: "Awesome TypeScript Essential Resources",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Typescript Project Starters",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Tutorials",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Tools",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Types",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Runtime",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Validation",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Design patterns",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Libraries",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Free Courses",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+      {
+        title: "Paid Courses",
+        icon: { kind: "font", source: "ic_icon text-24 ic_medal" },
+        path: {
+          href: "/",
+        },
+      },
+    ],
   },
 ];
 
