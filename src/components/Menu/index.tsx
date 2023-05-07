@@ -1,7 +1,12 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/router";
+import {
+  useParams,
+  usePathname,
+  useRouter,
+  useSearchParams,
+} from "next/navigation";
 import { ElementTypes } from "types";
 import { composeRef } from "configs/ref";
 import { MenuTitle } from "./MenuTitle";
@@ -15,6 +20,7 @@ export interface MenuPropArg {
    * Data of the menu
    */
   data: Navigation[];
+  locale?: string;
 }
 
 export const Menu = React.forwardRef<
@@ -25,9 +31,9 @@ export const Menu = React.forwardRef<
     props: MenuPropArg & ElementTypes.StyledProps,
     ref: React.Ref<HTMLDivElement | undefined>
   ) => {
-    const { data, overrideStyled } = props;
+    const { data, locale, overrideStyled } = props;
     const navRef = React.useRef<HTMLInputElement>(null);
-    const router = useRouter();
+    const pathname = usePathname();
 
     const handleClick = (e: React.MouseEvent<HTMLElement>) => {
       e.preventDefault();
@@ -46,16 +52,16 @@ export const Menu = React.forwardRef<
                 key={idx}
                 navigation={item}
                 navList={navList}
-                routerPathName={router.pathname}
+                routerPathName={pathname}
                 onClick={handleClick}
               />
             ) : (
-              <MenuItem key={idx} navigation={item} locale={router.locale} />
+              <MenuItem key={idx} navigation={item} locale={locale} />
             );
           return <MenuTitle key={idx} navigation={item} />;
         });
       },
-      [router.locale, router.pathname]
+      [locale, pathname]
     );
 
     return (

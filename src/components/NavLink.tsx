@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/router";
+import { useRouter, usePathname } from "next/navigation";
 import Link, { LinkProps } from "next/link";
 
 type Props = LinkProps & {
   className?: string;
+  locale?: string;
   activeClassName: string;
   children?:
     | React.ReactNode
@@ -15,27 +16,24 @@ export default function NavLink({
   children,
   activeClassName,
   className,
+  locale,
   ...props
 }: Props) {
-  const { asPath, isReady, pathname, locale } = useRouter();
+  const pathname = usePathname();
   const [computedClassName, setComputedClassName] = React.useState(className);
 
   const isActive = pathname === props.href;
 
   React.useEffect(() => {
     // Check if the router fields are updated client-side
-    if (isReady) {
-      const newClassName = isActive
-        ? `${className} ${activeClassName}`.trim()
-        : className;
+    const newClassName = isActive
+      ? `${className} ${activeClassName}`.trim()
+      : className;
 
-      if (newClassName !== computedClassName) {
-        setComputedClassName(newClassName);
-      }
+    if (newClassName !== computedClassName) {
+      setComputedClassName(newClassName);
     }
   }, [
-    asPath,
-    isReady,
     props.as,
     props.href,
     activeClassName,
