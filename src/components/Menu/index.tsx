@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { ElementTypes } from "types";
 import { composeRef } from "configs/ref";
 import { MenuTitle } from "./MenuTitle";
