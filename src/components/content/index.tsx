@@ -1,9 +1,17 @@
+"use client";
+
 import { Pagination } from "components/Pagination";
+
 import CardBox from "./CardBox";
 import ContentStyled from "./index.styled";
 import { data } from "./data";
+import React from "react";
 
 const Content: React.FC = () => {
+  React.useEffect(() => {
+    return () => {};
+  }, []);
+
   return (
     <ContentStyled>
       <h2 className="mb-36">React Development Tools</h2>
